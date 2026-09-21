@@ -1,0 +1,10 @@
+# Schul-Dashboard – Apache-Konfiguration für Strato
+
+# Verzeichnis-Listing deaktivieren
+Options -Indexes
+
+# data/-Ordner komplett sperren (SQLite-Datei schützen)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^data/ - [F,L]
+</IfModule>
